@@ -1,26 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more informatio
-int number1 = 5;
-int number2 = 10;
-
-
-var name = "adam";
-var age = 50;
-
-if (name == "adam" && age < 60)
-{
-    Console.WriteLine("jESTEM Adamem lub mam mniej niż 60 at");
-}
-else if (age > 40)
-{
-    Console.WriteLine("jESTEM W wieku 40 lat");
-}
-else if (age > 30) ;
-{
-    Console.WriteLine("jESTEM W wieku 30 lat");
-}
 // OPERATORY RELACYJNE 
 // ==   równe
-// <=  lub
 // >=
 // !=  są różne
 
@@ -28,3 +8,28 @@ else if (age > 30) ;
 // && i 
 // || lub 
 // ! not - negacja
+int[] grades = new int[365];
+List<string> dayOfWeeks = new List<string>();
+dayOfWeeks.Add("poniedziałek");
+dayOfWeeks.Add("wtorek");
+dayOfWeeks.Add("środa");
+dayOfWeeks.Add("czwartek");
+dayOfWeeks.Add("piątek");
+dayOfWeeks.Add("sobota");
+dayOfWeeks.Add("niedziela");
+
+foreach (var day in dayOfWeeks)
+{
+    Console.WriteLine(day);
+}
+
+//for(var i=0; i<dayOfWeeks.Count; i++)  // sposób na pewność że nie pomylimy się w ilości 
+//{
+//    Console.WriteLine(dayOfWeeks[i]);
+//}
+
+//Console.WriteLine(dayOfWeeks[2]);
+
+//string[] dayOfWeeks2 = { "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota", "niedziela" };
+//Console.WriteLine(dayOfWeeks2[5]);
+Console.ReadLine();
