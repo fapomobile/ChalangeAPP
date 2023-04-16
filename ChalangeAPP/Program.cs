@@ -1,122 +1,128 @@
-﻿// See https://aka.ms/new-console-template for more informatio
+﻿
 int number = 8336;
 string numer = number.ToString();
-var nLiczba = numer.ToCharArray();
+char[] nLiczba = numer.ToArray();
 
+Console.WriteLine("Liczba " + numer + " posiada takie cyfry");
 
-List<char> numbers = new List<char>();
+int counter0 = 0;
+int counter1 = 0;
+int counter2 = 0;
+int counter3 = 0;
+int counter4 = 0;
+int counter5 = 0;
+int counter6 = 0;
+int counter7 = 0;
+int counter8 = 0;
+int counter9 = 0;
 
-numbers.Add('0');
-numbers.Add('1');
-numbers.Add('2');
-numbers.Add('3');
-numbers.Add('4');
-numbers.Add('5');
-numbers.Add('6');
-numbers.Add('7');
-numbers.Add('8');
-numbers.Add('9');
+//  Liczym jakie mamy liczby i ile
 
-for (char i ='0'; i < numbers.Count; i++)
-
-//foreach(var numeros in numbers)
-//{
- //   Console.WriteLine(numeros + "  Numery z listy");
-//}
+foreach (var letter in nLiczba)
 {
- //   Console.WriteLine(i);
-}
-
-
-
-char number1 = '0';
-char number2 = '1';
-char number3 = '2';
-char number4 = '3';
-char number5 = '4';
-char number6 = '5';
-char number7 = '6';
-char number8 = '7';
-char number9 = '8';
-char number10 = '9';
-
-
-
-
-char[] nNr = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-
-Console.WriteLine(nLiczba.Count() + "  Ilość Liczb Max");
-
-//Console.WriteLine(nNr[6] + "  Porównana liczba");
-int nNumber0 = nNr[0];
-int nNumber1 = nNr[1];
-int nNumber2 = nNr[2];
-int nNumber3 = nNr[3];
-int nNumber4 = nNr[4];
-int nNumber5 = nNr[5];
-int nNumber6 = nNr[6];
-int nNumber7 = nNr[7];
-int nNumber8 = nNr[8];
-int nNumber9 = nNr[9];
-
-//for (var nNr1 = 0; nNr1 < nNr.Length; nNr1=nNr1+1) // i++
-//{
-//    Console.WriteLine(nNr[nNr1] + "  To ten numer powtarzamy");
-//}
-
-if (nLiczba.Contains <char>(number1))
-{
-    Console.WriteLine(number1);
-}
- if (nLiczba.Contains<char>(number2))
-{
-    Console.WriteLine(number2);
-}
- if (nLiczba.Contains<char>(number3))
-{
-    Console.WriteLine(number3);
-}
- if (nLiczba.Contains<char>(number4))
-{
-    Console.WriteLine(number4);
-}
- if (nLiczba.Contains<char>(number5))
-{
-    Console.WriteLine(number5);
-}
- if (nLiczba.Contains<char>(number6))
-{
-    Console.WriteLine(number6);
-}
- if (nLiczba.Contains<char>(number7))
-{
-   
+    if (letter == '0')
     {
-        Console.WriteLine(number7);
+        counter0++;
+    }
+    else if (letter == '1')
+    {
+        counter1++;
+    }
+    else if (letter == '2')
+    {
+        counter2++;
+    }
+    else if (letter == '3')
+    {
+        counter3++;
+    }
+    else if (letter == '4')
+    {
+        counter4++;
+    }
+    else if (letter == '5')
+    {
+        counter5++;
+    }
+    else if (letter == '6')
+    {
+        counter6++;
+    }
+    else if (letter == '7')
+    {
+        counter7++;
+    }
+    else if (letter == '8')
+    {
+        counter8++;
+    }
+    else if (letter == '9')
+    {
+        counter9++;
     }
 }
- if (nLiczba.Contains<char>(number8))
-{
-    Console.WriteLine(number8);
-}
- if (nLiczba.Contains<char>(number9))
-{
-    Console.WriteLine(number9);
-}
-if (nLiczba.Contains<char>(number10))
-{
-    Console.WriteLine(number10);
-}
-//Console.WriteLine( numer +"  Wtym numerze zawierają się te liczby");  // pokazuje liczbę 
-Console.WriteLine(nLiczba.Length + "  Tyle jest char (Liczb)");  // liczy ile jest liczb (char)
 
-// OPERATORY RELACYJNE 
-// ==   równe
-// <=  lub
-// >=
-// !=  są różne
+//  Wypisujemy które liczby nam wystąpiły
 
-// operator logiczny 
-// && i 
-// || lub 
-// ! not - negacja
+Console.WriteLine("Liczb 0 => " + counter0);
+Console.WriteLine("Liczb 1 => " + counter1);
+Console.WriteLine("Liczb 2 => " + counter2);
+Console.WriteLine("Liczb 3 => " + counter3);
+Console.WriteLine("Liczb 4 => " + counter4);
+Console.WriteLine("Liczb 5 => " + counter5);
+Console.WriteLine("Liczb 6 => " + counter6);
+Console.WriteLine("Liczb 7 => " + counter7);
+Console.WriteLine("Liczb 8 => " + counter8);
+Console.WriteLine("Liczb 9 => " + counter9);
+
+// Liczymy ile cyfr jest w liczbie
+
+Console.WriteLine(nLiczba.Count() + "  Ilość Liczb w Liczbie " + numer);
+
+
+//  tworzenie tablicy Numery w celu sprawdzenia jakie cyfry zawiera nasza liczba
+
+char[] numery = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
+// Tu sprawdzamy jakie mamy cyfry
+
+if (nLiczba.Contains<char>(numery[0]))
+{
+    Console.WriteLine("Mamy liczbę : " + numery[0]);
+}
+if (nLiczba.Contains<char>(numery[1]))
+{
+    Console.WriteLine("Mamy liczbę : " + numery[1]);
+}
+if (nLiczba.Contains<char>(numery[2]))
+{
+    Console.WriteLine("Mamy liczbę : " + numery[2]);
+}
+if (nLiczba.Contains<char>(numery[3]))
+{
+    Console.WriteLine("Mamy liczbę : " + numery[3]);
+}
+if (nLiczba.Contains<char>(numery[4]))
+{
+    Console.WriteLine("Mamy liczbę : " + numery[4]);
+}
+if (nLiczba.Contains<char>(numery[5]))
+{
+    Console.WriteLine("Mamy liczbę : " + numery[5]);
+}
+if (nLiczba.Contains<char>(numery[6]))
+{
+    Console.WriteLine("Mamy liczbę : " + numery[6]);
+}
+if (nLiczba.Contains<char>(numery[7]))
+{
+    Console.WriteLine("Mamy liczbę : " + numery[7]);
+}
+if (nLiczba.Contains<char>(numery[8]))
+{
+    Console.WriteLine("Mamy liczbę : " + numery[8]);
+}
+if (nLiczba.Contains<char>(numery[9]))
+{
+    Console.WriteLine("Mamy liczbę : " + numery[9]);
+}
